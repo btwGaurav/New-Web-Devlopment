@@ -62,10 +62,68 @@ body{
 }
 .navbar a::after{
     content: '';
-    width: 100%;
+    width: 0 ;
     height: 2px;
     background: var(--main--color);
     position: absolute;
     bottom: -4px;
     left: 0px;
+    transition: 0.4s all linear;
+}
+.navbar a:hover::after , .navbar .home-active::after{
+    width: 100%;
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.btn{
+    padding: 0.7rem 1.4rem;
+    background: var(--main--color);
+    color: var(--bg--color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: #fa1216;
+}
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+.container{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2,3,7, 0.4);
+
+
+}
+.container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+.container2{
+    width: 100%;
+    min-height: 540px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2,3,7, 0.4);
+}
+.container2 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
 }
